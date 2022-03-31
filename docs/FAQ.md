@@ -9,7 +9,7 @@ In particular, we used Flye to assemble PacBio's P5C3, P6C4, Sequel and Sequel I
 ONT's R7-R10 basecalled with Albacore, Guppy and Bonito.
 We typically use regular (uncorrected) reads without any special preparations. 
 
-Flye is designed to support various genomes, for viral bacterial to mammalian-scale. 
+Flye is designed to support various genomes, for viral, bacterial to mammalian-scale. 
 Metagenomic datasets are also supported, including real complex communities. 
 You can also check the table with Flye benchmarks in the [Usage file](USAGE.md).
 
@@ -100,7 +100,7 @@ What is minimum read coverage required for Flye?
 
 One can typically get satisfying assembly contiguity
 with 30x+ PacBio / ONT reads, if the read length is
-sufficient (e.g. with N50 of severl kb). 
+sufficient (e.g. with N50 of several kb). 
 You might need higher coverage to improve the consensus quality.
 
 Depending on the technology and read length distribution, 
@@ -110,7 +110,7 @@ of datasets with coverage below 10x is not recommended.
 How do I select genome size if I don't know it in advance?
 ----------------------------------------------------------
 
-Genome size parameter is no  longer required since the version 2.8.
+Genome size parameter is no longer required since the version 2.8.
 
 
 I have a seemingly sufficient number of reads, but nothing was assembled. Why is that?
@@ -177,7 +177,7 @@ Do I still need Illumina polishing or long-read polishing is good enough?
 -------------------------------------------------------------------------
 
 It is a somewhat difficult question to answer. Flye does include
-polishing step, and it producing high quality consensus on bacterial
+polishing step, and it produces high quality consensus on bacterial
 PacBio CLR datasets with high coverage. For example, see this recent 
 [evaluation by Ryan Wick](https://github.com/rrwick/Long-read-assembler-comparison).
 On the other hand, PacBio has specialized Quiver/Arrow tools that
@@ -193,7 +193,7 @@ But it should be applied with caution to prevent over-correction of repetitive r
 Also see [Watson and Warr paper](https://www.nature.com/articles/s41587-018-0004-z) 
 for a discussion on the assembly quality.
 
-Should I use regulat or error-corrected reads?
+Should I use regular or error-corrected reads?
 ---------------------------------------------
 
 Flye was primarily designed and tested  using regular (uncorrected) reads, so it is always the recommended option.
@@ -220,7 +220,7 @@ Are cluster environments (SGE / Slurm etc.) supported?
 
 Currently, cluster environments are not supported. Flye was designed to run on a single
 high-memory node, and it will be difficult to make it run in a distributed environment.
-Note that Flye pipeline has multiple consecutive stages, that are could be resumed and
+Note that Flye pipeline has multiple consecutive stages, that could be resumed and
 run on different machines, if desired.
 
 Can I run the Flye polisher on an existing assembly?
